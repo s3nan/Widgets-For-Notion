@@ -1,8 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 
-  
+  <head>
+    <style>
+        body { margin: 0; padding: 0; }
+        /* Kapsayıcı: İçindeki her şeyi yan yana dizer ve boşlukları sıfırlar */
+        .widget-row {
+            display: flex;
+            flex-direction: row;
+            gap: 0px; /* Boşluksuz olması için 0 yaptık */
+            width: 700;
+        }
+        /* Widget Kutuları: %50 diyerek ekranı ikiye böldük */
+        .widget-box {
+            flex: 1; 
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="widget-row"> <!-- widget sıra başlangıç-->
+
+<div class="widget-box">
   <!--  XAU-TRYG  -->
 <div class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget"></div>
@@ -13,13 +33,17 @@
   "colorTheme": "dark",
   "isTransparent": false,
   "locale": "en",
-  "width": 350
+  "width": "100%" <!--350 idi>
 }
   </script>
 </div>
 <!--  XAU-TRYG  END-->
+</div>
 
 <!-- USD-TRY -->
+
+<div class="widget-box">
+
 <div class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget"></div>
   <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/USDTRY/?exchange=FX" rel="noopener nofollow" target="_blank"></div>
@@ -29,12 +53,21 @@
   "colorTheme": "dark",
   "isTransparent": false,
   "locale": "en",
-  "width": 350
+  "width": "100%" <!--350 idi>
 }
   </script>
 </div>
 <!-- USD-TRY END-->
 
+
+</div>
+</div> <!-- widget düzeni için div sonu>
+
+
+
+
+ </body> 
+</html>
 
 
 
@@ -44,5 +77,6 @@
 
   
 </html>
+
 
 
