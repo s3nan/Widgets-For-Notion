@@ -2,8 +2,9 @@
 <html lang="tr">
 
   <head>
+  <meta charset="UTF-8">
     <style>
-        body { margin: 0; padding: 0; }
+        body { margin: 0; padding: 0; overflow: hidden; }
         /* Kapsayıcı: İçindeki her şeyi yan yana dizer ve boşlukları sıfırlar */
         .widget-row {
             display: flex;
@@ -11,11 +12,22 @@
             gap: 0px; /* Boşluksuz olması için 0 yaptık */
             width: 700px;
         }
-        /* Widget Kutuları: %50 diyerek ekranı ikiye böldük */
+        
+		/* Widget Kutuları: %50 diyerek ekranı ikiye böldük */
         .widget-box {
             flex: 1; 
             width: 350px;
         }
+		
+		/* COPYRIGHT KISMINI GİZLEYEN SİHİRLİ KOD */
+        .tradingview-widget-copyright {
+            display: none !important;
+            visibility: hidden;
+            height: 0;
+            margin: 0;
+            padding: 0;
+        }
+		
     </style>
 </head>
 <body>
@@ -28,7 +40,7 @@
 <div class="widget-box"> 
 <div class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget">
-  <!--<a href="https://www.tradingview.com/symbols/FX_IDC-XAUTRYG/" rel="noopener nofollow" target="_blank">--></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/FX_IDC-XAUTRYG/" rel="noopener nofollow" target="_blank"></div>
   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
   {
   "symbol": "FX_IDC:XAUTRYG",
@@ -49,7 +61,7 @@
 <div class="widget-box">
 <div class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget">
-  <!--<a href="https://www.tradingview.com/symbols/USDTRY/?exchange=FX" rel="noopener nofollow" target="_blank">--></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/USDTRY/?exchange=FX" rel="noopener nofollow" target="_blank"></div>
   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
   {
   "symbol": "FX:USDTRY",
